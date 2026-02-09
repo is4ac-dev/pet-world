@@ -4,8 +4,201 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mundo Pet | Agenda</title>
+
+  <link rel="icon" href="src/assets/logo.svg" type="image/x-icon">
 </head>
 <body>
   
+  <!-- LOGO E NOME: MUNDO PET -->
+  <aside id="logo-name">
+    <a href="/">
+      <img src="src/assets/logo.svg">
+      <span>Mundo Pet</span>
+    </a>
+  </aside>
+
+  <!-- APLICAÇÃO AGENDA -->
+  <main id="agenda-app">
+
+    <!-- Título da agenda -->
+    <header id="agenda-title">
+      <h1>Sua agenda</h1>
+      <p>Aqui você pode ver todos os clientes e serviços agendados para data selecionada.</p>
+    </header>
+
+    <!-- Seletor de data -->
+    <label class="input-wrapper">
+      <img src="src/assets/date.svg">
+      <input type="date" class="hidden-input">
+      <img src="src/assets/show.svg">
+    </label>
+
+    <!-- Timeline de Períodos -->
+    <div class="timeline-container">
+
+      <!-- Período: Manhã -->
+      <section>
+
+        <!-- Título da sessão: Manhã -->
+        <header class="period-title">
+          <img src="src/assets/morning.svg">
+          <h2>Manhã</h2>
+          <time>09h-12h</time>
+        </header>
+
+        <!-- Lista de agendamentos da sessão: Manhã -->
+        <ul>
+          <!-- Exemplo -->
+           <li>
+            <time>09:00</time>
+            <span><strong>Thor</strong><small>/ Fernanda Costa</small></span>
+            <small>Vacinação</small>
+            <button type="button">Remover agendamento</button>
+           </li>
+        </ul>
+
+      </section>
+
+      <!-- Período: Tarde -->
+      <section>
+
+        <!-- Título da sessão: Tarde -->
+        <header class="period-title">
+          <img src="src/assets/afternoon.svg">
+          <h2>Tarde</h2>
+          <time>13h-18h</time>
+        </header>
+
+        <!-- Lista de agendamentos da sessão: Tarde -->
+        <ul>
+          <!-- Exemplo -->
+           <li>
+            <time>13:00</time>
+            <span><strong>Mel</strong><small>/ João Souza</small></span>
+            <small>Corte de Unhas</small>
+            <button type="button">Remover agendamento</button>
+           </li>
+
+           <!-- Exemplo -->
+            <li>
+            <time>14:00</time>
+            <span><strong>Bella</strong><small>/ Pedro Martins</small></span>
+            <small>Aplicação de Anti-pulgas</small>
+            <button type="button">Remover agendamento</button>
+           </li>
+
+           <!-- Exemplo -->
+            <li>
+            <time>15:00</time>
+            <span><strong>Simba</strong><small>/ Juliana Rocha</small></span>
+            <small>Tosa Higiênica</small>
+            <button type="button">Remover agendamento</button>
+           </li>
+        </ul>
+
+      </section>
+
+      <!-- Período: Noite -->
+      <section>
+
+        <!-- Título da sessão: Noite -->
+        <header class="period-title">
+          <img src="src/assets/night.svg">
+          <h2>Noite</h2>
+          <time>19h-21h</time>
+        </header>
+
+        <!-- Lista de agendamentos da sessão: Noite -->
+        <ul>
+          <!-- Exemplo -->
+           <li>
+            <time>20:00</time>
+            <span><strong>Max</strong><small>/ Camila Santos</small></span>
+            <small>Limpeza de Dentes</small>
+            <button type="button">Remover agendamento</button>
+           </li>
+        </ul>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- BOTÃO DE NOVO AGENDAMENTO -->
+  <button type="button" id="new-schedule-btn">Novo agendamento</button>
+
+  <!-- APLICAÇÃO NOVO AGENDAMENTO -->
+   <dialog open>
+
+    <!-- Título do agendamento -->
+    <header id="schedule-title">
+      <h2>Agende um atendimento</h2>
+      <p>Preencha os dados do cliente para realizar o agendamento:</p>
+    </header>
+
+    <!-- Formulário de agendamento -->
+    <form id="new-schedule">
+
+      <!-- Input: Nome do tutor -->
+      <div class="input-box">
+        <span>Nome do tutor</span>
+        <label for="client-owner">
+          <img src="src/assets/owner.svg">
+          <input type="text" id="client-owner" placeholder="Helena Souza">
+        </label>
+      </div>
+
+      <!-- Input: Nome do pet -->
+      <div class="input-box">
+        <span>Nome do pet</span>
+        <label for="client-pet">
+          <img src="src/assets/pet.svg">
+          <input type="text" id="client-pet" placeholder="Cheddar">
+        </label>
+      </div>
+
+      <!-- Input: Telefone do cliente -->
+      <div class="input-box">
+        <span>Telefone</span>
+        <label for="client-phone">
+          <img src="src/assets/phone.svg">
+          <input type="tel" id="client-phone" placeholder="(00) 00000-0000">
+        </label>
+      </div>
+
+      <!-- Input: Descrição do serviço -->
+      <div class="input-box">
+        <span>Descrição do serviço</span>
+        <textarea id="client-service" placeholder="Banho e tosa"></textarea>
+      </div>
+
+      <!-- Input: Data do atendimento -->
+       <div class="wrapper-box">
+        <span>Data</span>
+        <label class="input-wrapper">
+          <img src="src/assets/date.svg">
+          <input type="date" class="hidden-input">
+          <img src="src/assets/show.svg">
+        </label>
+       </div>
+      
+      <!-- Input: Horário do atendimento -->
+      <div class="wrapper-box">
+        <span>Hora</span>
+        <label class="input-wrapper">
+          <img src="src/assets/time.svg">
+          <input type="time" class="hidden-input">
+          <img src="src/assets/show.svg">
+        </label>
+      </div>
+
+      <!-- Button: Botão de agendar -->
+      <button type="submit">Agendar</button>
+
+    </form>
+
+   </dialog>
+
 </body>
 </html>
