@@ -15,5 +15,5 @@ import "./styles/media.css"
 // Importando JS
 import "./modules/global/load-day.js"
 import "./modules/global/load-hour.js"
-import "./modules/schedule/load-form.js"
 import "./modules/schedule/open-close-schedule.js"
+import "./modules/schedule/submit.js"
