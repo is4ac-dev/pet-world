@@ -36,19 +36,42 @@ dialog::backdrop {
 }
 
 #schedule-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 2rem;
-  text-align: left;
 }
 
 #schedule-title h2 {
   font: var(--title);
   color: var(--cont-prime);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
+  line-height: 2rem;
+}
+
+#cancel-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;  
+  height: 2.5rem;
+  padding: 0;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+#cancel-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 #schedule-title p {
   font: var(--parag-md);
   color: var(--cont-secon);
+  width: 100%;
+  margin-top: 0.5rem;
 }
 
 #new-schedule {
@@ -77,6 +100,37 @@ dialog::backdrop {
   border: 1px solid var(--bord-prime);
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
+}
+
+.input-box input {
+  background: transparent;
+  border: none;
+  color: var(--cont-prime);
+  font: var(--parag-md);
+  width: 100%;
+}
+
+.input-box textarea {
+  background-color: var(--back-prime);
+  border: 1px solid var(--bord-prime);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: var(--cont-prime);
+  font: var(--parag-md);
+  width: 100%;
+  resize: none;
+  height: 5rem;
+}
+
+.input-box input::placeholder,
+.input-box textarea::placeholder {
+  color: var(--cont-terti);
+}
+
+#new-schedule .wrapper-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .wrapper-box .input-wrapper {
@@ -109,42 +163,13 @@ dialog::backdrop {
   z-index: 1;
   pointer-events: none;
 }
+
 .wrapper-box .input-wrapper img:first-child {
   left: 1rem;
 }
+
 .wrapper-box .input-wrapper img:last-child {
   right: 1rem;
-}
-
-.input-box input {
-  background: transparent;
-  border: none;
-  color: var(--cont-prime);
-  font: var(--parag-md);
-  width: 100%;
-}
-
-.input-box textarea {
-  background-color: var(--back-prime);
-  border: 1px solid var(--bord-prime);
-  border-radius: 0.5rem;
-  padding: 0.75rem 1rem;
-  color: var(--cont-prime);
-  font: var(--parag-md);
-  width: 100%;
-  resize: none;
-  height: 5rem;
-}
-
-.input-box input::placeholder,
-.input-box textarea::placeholder {
-  color: var(--cont-terti);
-}
-
-#new-schedule .wrapper-box {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
 }
 
 #new-schedule button[type="submit"] {
