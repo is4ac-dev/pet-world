@@ -1,7 +1,7 @@
 import dayjs from "dayjs"
-import { apiConfig } from "./api-config"
+import { apiConfig } from "./api-config.js"
 
-export async function scheduleFecthByDay({ date }) {
+export async function scheduleFetchByDay({ date }) {
   
   // Requisitando dados da API
   const response = await fetch(`${apiConfig.baseURL}/schedules`)

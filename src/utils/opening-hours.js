@@ -1,6 +1,6 @@
 // Horários disponíveis para atendimento
 export const openingHours = [
-  "9:00",
+  "09:00",
   "10:00",
   "11:00",
   "12:00",

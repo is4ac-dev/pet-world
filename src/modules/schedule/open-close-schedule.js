@@ -5,7 +5,8 @@ import { toggleBlur } from "../../utils/blur.js"
 import { availableHours } from "../../utils/available-hours.js"
 
 // Importando o módulo para construir as opções de horários disponíveis
-import { buildAvailableHours } from "../../utils/buil-available-hours.js"
+import { buildAvailableHours } from "../../utils/build-available-hours.js"
+import { scheduleFetchByDay } from "../../services/schedule-fetch-by-day.js"
 
 // Recebendo botão de novo agendamento
 const newScheduleBtn = document.getElementById("new-schedule-btn")
@@ -17,7 +18,7 @@ const cancelNewSchedule = document.getElementById("cancel-button")
 const newScheduleSection = document.querySelector("dialog")
 
 // Esperando botão de registrar novo agendamento
-newScheduleBtn.onclick = () => {
+newScheduleBtn.onclick = async () => {
 
   // Aplicando blur e desabilitando eventos de ponteiro
   toggleBlur(true)
@@ -25,8 +26,11 @@ newScheduleBtn.onclick = () => {
   // Por padrão: Carregando data atual
   const date = new Date()
 
+  // Buscando na API os agendamentos
+  const dailySchedules = await scheduleFetchByDay({ date })
+
   // Verificando horários disponíveis a partir da data atual
-  const hours = availableHours({ date })
+  const hours = availableHours({ date, dailySchedules })
 
   // Construindo opções de horários disponíveis
   buildAvailableHours(hours)

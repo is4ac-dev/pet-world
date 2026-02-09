@@ -1,8 +1,8 @@
 // Importando módulo seletor de dia
-import { scheduleFecthByDay } from "../../services/schedule-fetch-by-day.js"
+import { scheduleFetchByDay } from "../../services/schedule-fetch-by-day.js"
 
 // Importando módulo para exibir agendamentos
-import { schedulesShow } from "../agenda/show.js"
+import { schedulesShow } from "./show.js"
 
 // Recebendo o elemento de seletor de data da agenda
 const dateAgendaSelector = document.getElementById("agenda-date-selector")
@@ -14,7 +14,7 @@ dateAgendaSelector.addEventListener("input", async () => {
   const date = dateAgendaSelector.value
 
   // Requisitando agendamentos da API
-  const dailySchedules = await scheduleFecthByDay({ date })
+  const dailySchedules = await scheduleFetchByDay({ date })
 
   // Exibindo os agendamentos na agenda
   schedulesShow({ dailySchedules })
