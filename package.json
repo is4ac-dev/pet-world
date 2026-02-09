@@ -3,7 +3,8 @@
   "description": "Aplicação Web para agendamento de serviços Pet.",
   "author": "Isaac Monteiro",
   "scripts": {
-    "server": "json-server --watch server.json --port 3333"
+    "server": "json-server --watch server.json --port 3333",
+    "build": "webpack"
   },
   "dependencies": {
     "json-server": "^1.0.0-beta.5"
