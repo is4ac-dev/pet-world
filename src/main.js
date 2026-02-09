@@ -13,4 +13,6 @@ import "./styles/schedule.css"
 import "./styles/media.css"
 
 // Importando JS
+import "./modules/form/load-form.js"
 import "./modules/agenda/selected-day.js"
+import "./modules/schedule/new-schedule-btn.js"
