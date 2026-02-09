@@ -48,7 +48,8 @@ export function schedulesShow({ dailySchedules }){
     // Adicionando elementos no item
     item.append(time, client, service, removeBtn)
 
-    const hour = dayjs(schedule.when).hour()
+    // Recebendo somente a hora para comparação
+    const hour = Number(dayjs(schedule.when).hour())
 
     // Renderizando o agendamento na sessão de forma condicional (manhã, tarde ou noite)
     if(hour <= 12){
