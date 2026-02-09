@@ -1,0 +1,124 @@
+dialog {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  background-color: var(--back-secon);
+  border: none;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 90%;
+  height: 90vh;
+  max-width: 480px;
+  color: var(--cont-prime);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+  z-index: 50;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--bord-prime) transparent;
+}
+
+dialog::-webkit-scrollbar {
+  width: 6px;
+}
+
+dialog::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+dialog::-webkit-scrollbar-thumb {
+  background-color: var(--bord-prime);
+  border-radius: 4px;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+}
+
+#schedule-title {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+#schedule-title h2 {
+  font: var(--title);
+  color: var(--cont-prime);
+  margin-bottom: 0.5rem;
+}
+
+#schedule-title p {
+  font: var(--parag-md);
+  color: var(--cont-secon);
+}
+
+#new-schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.input-box > span,
+.wrapper-box > span {
+  font: var(--label-sm);
+  color: var(--cont-prime);
+}
+
+.input-box label,
+.wrapper-box .input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--back-prime);
+  border: 1px solid var(--bord-prime);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.input-box input,
+.wrapper-box input {
+  background: transparent;
+  border: none;
+  color: var(--cont-prime);
+  font: var(--parag-md);
+  width: 100%;
+}
+
+.input-box textarea {
+  background-color: var(--back-prime);
+  border: 1px solid var(--bord-prime);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: var(--cont-prime);
+  font: var(--parag-md);
+  width: 100%;
+  resize: none;
+  height: 5rem;
+}
+
+.input-box input::placeholder,
+.input-box textarea::placeholder {
+  color: var(--cont-terti);
+}
+
+#new-schedule .wrapper-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#new-schedule button[type="submit"] {
+  margin-top: 1rem;
+  background-color: var(--back-brand);
+  color: #050505;
+  font: var(--label-md);
+  text-transform: uppercase;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
