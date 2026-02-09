@@ -34,7 +34,7 @@
     <!-- Seletor de data -->
     <label class="input-wrapper">
       <img src="src/assets/date.svg">
-      <input type="date" class="hidden-input">
+      <input type="date" id="agenda-date-selector" class="hidden-input">
       <img src="src/assets/show.svg">
     </label>
 
@@ -53,13 +53,13 @@
 
         <!-- Lista de agendamentos da sessão: Manhã -->
         <ul>
-          <!-- Exemplo -->
+          <!-- Exemplo
            <li>
             <time>09:00</time>
             <span><strong>Thor</strong><small>/ Fernanda Costa</small></span>
             <small>Vacinação</small>
             <button type="button">Remover agendamento</button>
-           </li>
+           </li> -->
         </ul>
 
       </section>
@@ -76,29 +76,13 @@
 
         <!-- Lista de agendamentos da sessão: Tarde -->
         <ul>
-          <!-- Exemplo -->
+          <!-- Exemplo
            <li>
             <time>13:00</time>
             <span><strong>Mel</strong><small>/ João Souza</small></span>
             <small>Corte de Unhas</small>
             <button type="button">Remover agendamento</button>
-           </li>
-
-           <!-- Exemplo -->
-            <li>
-            <time>14:00</time>
-            <span><strong>Bella</strong><small>/ Pedro Martins</small></span>
-            <small>Aplicação de Anti-pulgas</small>
-            <button type="button">Remover agendamento</button>
-           </li>
-
-           <!-- Exemplo -->
-            <li>
-            <time>15:00</time>
-            <span><strong>Simba</strong><small>/ Juliana Rocha</small></span>
-            <small>Tosa Higiênica</small>
-            <button type="button">Remover agendamento</button>
-           </li>
+           </li> -->
         </ul>
 
       </section>
@@ -115,13 +99,13 @@
 
         <!-- Lista de agendamentos da sessão: Noite -->
         <ul>
-          <!-- Exemplo -->
+          <!-- Exemplo
            <li>
             <time>20:00</time>
             <span><strong>Max</strong><small>/ Camila Santos</small></span>
             <small>Limpeza de Dentes</small>
             <button type="button">Remover agendamento</button>
-           </li>
+           </li> -->
         </ul>
 
       </section>
@@ -139,6 +123,7 @@
     <!-- Título do agendamento -->
     <header id="schedule-title">
       <h2>Agende um atendimento</h2>
+      <button type="button" id="cancel-button"><img src="src/assets/cancel.svg"></button>
       <p>Preencha os dados do cliente para realizar o agendamento:</p>
     </header>
 
