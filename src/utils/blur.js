@@ -1,18 +1,22 @@
-// Recendo elementos para trabalhar o desfoque
+// Recebendo elementos para trabalhar o desfoque
 const aside = document.querySelector("aside")
 const main = document.querySelector("main")
 const button = document.getElementById("new-schedule-btn")
 
-// Função para aplicar blur
-export function blurTrue(){
+// Criando lista com elementos
+const elementsToBlur = [aside, main, button]
 
-  // Desabilitando eventos de ponteiro
-  aside.style.pointerEvents = "none"
-  main.style.pointerEvents = "none"
-  button.style.pointerEvents = "none"
+// Criando função para desfoque
+export function toggleBlur(state) {
 
-  // Aplicando blur nos elementos traseiros
-  aside.style.filter = "blur(5px)"
-  main.style.filter = "blur(5px)"
-  button.style.filter = "blur(5px)"
+    // Se state for true, aplica blur. Se false, remove.
+    const filterValue = state ? "blur(5px)" : "none";
+    const pointerValue = state ? "none" : "auto";
+
+    elementsToBlur.forEach((element) => {
+        if (element) { // Verificação de segurança caso o elemento não exista
+            element.style.filter = filterValue;
+            element.style.pointerEvents = pointerValue;
+        }
+    });
 }
