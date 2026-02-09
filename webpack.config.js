@@ -1,6 +1,9 @@
 // Módulo para universalizar os diretórios da aplicação (independe do OS)
 const path = require('path')
+
+// Importando plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require("copy-webpack-plugin")
 
 // Exportando configurações para o Webpack
 module.exports = {
@@ -31,6 +34,16 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "index.html"),
       favicon: path.resolve("src", "assets", "logo.svg"),
+    }),
+
+    // Carregando Assets no Bundler
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "src", "assets"),
+          to: path.resolve(__dirname, "dist", "src", "assets")
+        },
+      ],
     }),
   ],
 
