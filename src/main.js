@@ -15,4 +15,4 @@ import "./styles/media.css"
 // Importando JS
 import "./modules/form/load-form.js"
 import "./modules/agenda/selected-day.js"
-import "./modules/schedule/new-schedule-btn.js"
+import "./modules/schedule/open-close-schedule.js"
