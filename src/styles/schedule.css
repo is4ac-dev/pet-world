@@ -60,6 +60,7 @@ dialog::backdrop {
   border-radius: 0.25rem;
   cursor: pointer;
   background: transparent;
+  outline: none;
 }
 
 #cancel-button img {
@@ -103,12 +104,17 @@ dialog::backdrop {
   border-radius: 0.5rem;
 }
 
+.input-box label:focus-within {
+  border-color: var(--cont-brand);
+}
+
 .input-box input {
   background: transparent;
   border: none;
   color: var(--cont-prime);
   font: var(--parag-md);
   width: 100%;
+  outline: none;
 }
 
 .input-box textarea {
@@ -121,6 +127,11 @@ dialog::backdrop {
   width: 100%;
   resize: none;
   height: 5rem;
+  outline: none;
+}
+
+.input-box textarea:focus {
+  border-color: var(--cont-brand);
 }
 
 .input-box input::placeholder,
@@ -145,6 +156,10 @@ dialog::backdrop {
   min-height: 3.25rem;
 }
 
+.wrapper-box .input-wrapper:focus-within {
+  border-color: var(--cont-brand);
+}
+
 .wrapper-box input,
 .wrapper-box select {
   position: absolute;
@@ -159,6 +174,7 @@ dialog::backdrop {
   width: 100%;
   height: 100%;
   cursor: pointer;
+  outline: none;
 }
 
 .wrapper-box select {
@@ -195,4 +211,5 @@ dialog::backdrop {
   padding: 0.75rem;
   border-radius: 0.5rem;
   width: 100%;
+  outline: none;
 }
