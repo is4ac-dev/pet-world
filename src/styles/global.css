@@ -1,0 +1,45 @@
+:root {
+  /* CONTENT */
+  --cont-prime: #FFFFFF;
+  --cont-secon: #98959D;
+  --cont-terti: #666666; /* EM NOME DE JESUS, SAIA */
+  --cont-brand: #9282FA;
+
+  /* BACKGROUND */
+  --back-prime: #151515;
+  --back-secon: #1E1E1E;
+  --back-terti: #23242C;
+  --back-brand: #9282FA;
+  --back-hi-li: #BDB4FA;
+
+  /* BORDER */
+  --bord-prime: #3E3C41;
+  --bord-secon: #86818C;
+  --bord-brand: #9282FA;
+  --bord-divis: #353339;
+
+  /* ACCENT */
+  --acct-blue : #027DF0;
+  --acct-liblu: #16487A;
+  --acct-yello: #F0DC02;
+  --acct-liyel: #756E1B;
+  --acct-orang: #F09102;
+  --acct-liora: #75501B;
+
+  /* INTER TIGHT */
+  --title   : 700 1.5rem/2rem "Inter Tight", sans-serif;
+
+  /* INTER */
+  --parag-md: 500 0.875rem/1.5rem "Inter", sans-serif;
+  --parag-sm: 500 0.75rem/1rem "Inter", sans-serif;
+  --label-lg: 700 1rem/1rem "Inter", sans-serif;
+  --label-md: 700 0.875rem/1.5rem "Inter", sans-serif;
+  --label-sm: 700 0.75rem/1rem "Inter", sans-serif;
+  --link    : 500 0.75rem/1rem "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
