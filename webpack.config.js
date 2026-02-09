@@ -4,6 +4,7 @@ const path = require('path')
 // Importando plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require("copy-webpack-plugin")
+const { execFile } = require('child_process')
 
 // Exportando configurações para o Webpack
 module.exports = {
@@ -54,7 +55,18 @@ module.exports = {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
-      }
-    ]
-  }
+      },
+      // Carregando Compiler Babel no Bundler
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"]
+          },
+        },
+      },
+    ],
+  },
 }
