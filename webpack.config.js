@@ -30,6 +30,7 @@ module.exports = {
     // Carregando HTML ao Webpack
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "index.html"),
+      favicon: path.resolve("src", "assets", "logo.svg"),
     }),
   ],
 }
