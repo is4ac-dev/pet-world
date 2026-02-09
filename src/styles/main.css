@@ -42,24 +42,44 @@
 }
 
 #agenda-app > .input-wrapper {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
   background-color: var(--back-prime);
   border: 1px solid var(--bord-prime);
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
   width: 100%;
-  justify-content: space-between;
+  min-height: 3.25rem;
 }
 
 #agenda-app > .input-wrapper input {
+  position: absolute;
+  inset: 0;
   background: transparent;
   border: none;
   color: var(--cont-prime);
   font: var(--label-md);
-  flex: 1;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  z-index: 10;
+  cursor: pointer;
 }
+
+#agenda-app > .input-wrapper img {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#agenda-app > .input-wrapper img:first-child {
+  left: 1rem;
+}
+
+#agenda-app > .input-wrapper img:last-child {
+  right: 1rem;
+}
+
 
 .timeline-container {
   display: flex;
