@@ -1,10 +1,14 @@
+// Importando módulo DAYJS
 import dayjs from "dayjs"
+
+// Importando módulo para enviar dados para API
+import { scheduleNew } from "../../services/new-schedule.js"
 
 // Recebendo formulário de agendamento
 const form = document.querySelector("form")
 
 // Esperando por evento de submit
-form.onsubmit = (event) => {
+form.onsubmit = async (event) => {
 
   // Prevenindo carregamento automático da página ao enviar o formulário
   event.preventDefault()
@@ -20,15 +24,15 @@ form.onsubmit = (event) => {
   // Criando objeto da data selecionada pelo client
   const when    = dayjs(`${date} ${hour}`)
 
-  // Construindo objeto com informações do agendamento do cliente
-  const clientSchedule = {
+  // Enviando objeto com informações do agendamento do cliente para API
+  await scheduleNew({
     id     : Date.now().toString(),
     owner  : owner.trim(),
     pet    : pet,
     phone  : phone,
     service: service,
     when   : when,
-  }
+  })
 
-  console.log(clientSchedule)
+  alert("Agendamento realizado com sucesso!")
 }
