@@ -1,4 +1,7 @@
 {
+  "name": "pet-world",
+  "description": "Aplicação Web para agendamento de serviços Pet.",
+  "author": "Isaac Monteiro",
   "scripts": {
     "server": "json-server --watch server.json --port 3333"
   },
