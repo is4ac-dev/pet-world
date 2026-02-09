@@ -1,6 +1,6 @@
 // Módulo para universalizar os diretórios da aplicação (independe do OS)
 const path = require('path')
-const { EntryOptionPlugin } = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 // Exportando configurações para o Webpack
 module.exports = {
@@ -22,5 +22,14 @@ module.exports = {
     port: 3000,
     open: true,
     liveReload: true,
-  }
+  },
+
+  // Configurações de Webpack Plugins
+  plugins: [
+
+    // Carregando HTML ao Webpack
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "index.html"),
+    }),
+  ],
 }
