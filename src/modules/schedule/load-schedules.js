@@ -8,9 +8,9 @@ import { availableHours } from "../../utils/available-hours.js"
 import { buildAvailableHours } from "../../utils/build-available-hours.js"
 
 // Recebendo o elemento de seletor de data da agenda
-const dateAgendaSelector = document.getElementById("schedule-hour")
+const dateAgendaSelector = document.getElementById("schedule-date")
 
-// Esperando pela seleção de um dia
+// Esperando pela seleção de um horário
 dateAgendaSelector.addEventListener("input", async (event) => {
   
   // Recebendo dia selecionado
