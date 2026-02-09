@@ -1,6 +1,12 @@
 // Importando módulo de Blur
 import { toggleBlur } from "../../utils/blur.js"
 
+// Importando o módulo para carregar horários disponíveis
+import { availableHours } from "../../utils/available-hours.js"
+
+// Importando o módulo para construir as opções de horários disponíveis
+import { buildAvailableHours } from "../../utils/buil-available-hours.js"
+
 // Recebendo botão de novo agendamento
 const newScheduleBtn = document.getElementById("new-schedule-btn")
 
@@ -12,10 +18,18 @@ const newScheduleSection = document.querySelector("dialog")
 
 // Esperando botão de registrar novo agendamento
 newScheduleBtn.onclick = () => {
-  console.log("Registrando novo agendamento!")
 
   // Aplicando blur e desabilitando eventos de ponteiro
   toggleBlur(true)
+
+  // Por padrão: Carregando data atual
+  const date = new Date()
+
+  // Verificando horários disponíveis a partir da data atual
+  const hours = availableHours({ date })
+
+  // Construindo opções de horários disponíveis
+  buildAvailableHours(hours)
 
   // Abrindo sessão de novo agendamento
   newScheduleSection.setAttribute("open", true)
@@ -23,7 +37,6 @@ newScheduleBtn.onclick = () => {
 
 // Esperando botão de cancelar
 cancelNewSchedule.onclick = () => {
-  console.log("Cancelando novo agendamento!")
 
   // Removendo blur e habilitando eventos de ponteiro
   toggleBlur(false)
