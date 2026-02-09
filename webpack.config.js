@@ -24,13 +24,24 @@ module.exports = {
     liveReload: true,
   },
 
-  // Configurações de Webpack Plugins
+  // Configurações de Plugins do Bundler
   plugins: [
 
-    // Carregando HTML ao Webpack
+    // Carregando HTML no Bundler
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "index.html"),
       favicon: path.resolve("src", "assets", "logo.svg"),
     }),
   ],
+
+  // Configurações de Módulos do Bundler
+  module: {
+    rules: [
+      // Carregando CSS no Bundler
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      }
+    ]
+  }
 }
