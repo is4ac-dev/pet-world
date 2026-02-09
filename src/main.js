@@ -1,0 +1,1 @@
+// main.js => Enterpoint da aplicação
