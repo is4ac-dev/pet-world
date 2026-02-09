@@ -4,6 +4,9 @@ import dayjs from "dayjs"
 // Importando módulo para enviar dados para API
 import { scheduleNew } from "../../services/new-schedule.js"
 
+// Importando módulo para aplicação do desfoque
+import { toggleBlur } from "../../utils/blur.js"
+
 // Recebendo formulário de agendamento
 const form = document.querySelector("form")
 
@@ -33,6 +36,15 @@ form.onsubmit = async (event) => {
     service: service,
     when   : when,
   })
+
+  // Recebendo sessão de novo agendamento
+  const newScheduleSection = document.querySelector("dialog")
+
+  // Removendo blur e habilitando eventos de ponteiro
+  toggleBlur(false)
+
+  // Fechando sessão de novo agendamento
+  newScheduleSection.removeAttribute("open")
 
   alert("Agendamento realizado com sucesso!")
 }
