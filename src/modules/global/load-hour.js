@@ -16,6 +16,6 @@ dateScheduleSelector.addEventListener("input", (event) => {
   // Recebendo horários disponíveis na data escolhida
   const hours = availableHours({ date })
 
-  // Construindo opções de horários disponíveis
+  // Construindo opções de horários
   buildAvailableHours(hours)
 })
