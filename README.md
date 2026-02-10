@@ -6,6 +6,7 @@ Uma aplicação web moderna e responsiva para gerenciamento de agendamentos de s
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 ## 📸 Preview
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/a79d59d8-26d9-405f-bb74-d766511ef11b" />
 
 ## 🚀 Funcionalidades
 
