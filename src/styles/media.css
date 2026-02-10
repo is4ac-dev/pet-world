@@ -78,3 +78,31 @@
     min-width: 120px;
   }
 }
+
+/* Correção para inputs em Mobile */
+@media (max-width: 768px) {
+  
+  /* Reduz o padding lateral para caber o texto em telas estreitas */
+  #agenda-app > .input-wrapper input {
+    padding-left: 2.5rem; /* Era 3rem */
+    padding-right: 1rem;  /* Era 3rem - o ícone da direita é decorativo */
+  }
+
+  /* Remove a aparência nativa (arredondamento/sombras padrão do iOS/Android) */
+  input[type="date"],
+  input[type="time"], 
+  input, 
+  select, 
+  textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent; /* Garante fundo transparente */
+  }
+  
+  /* Ajuste específico para iOS para o texto ficar centralizado verticalmente */
+  #agenda-app > .input-wrapper input {
+    min-height: 3.25rem;
+    line-height: 3.25rem; 
+  }
+}
