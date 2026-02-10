@@ -41,7 +41,8 @@ export function schedulesShow({ dailySchedules }){
     // Adicionando descrição do serviço
     service.textContent = schedule.service
 
-    // Adicionando tipo do button
+    // Adicionando button para remover agendamento
+    removeBtn.classList.add("remove-btn")
     removeBtn.type = "button"
     removeBtn.textContent = "Remover agendamento"
 
