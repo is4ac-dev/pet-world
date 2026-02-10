@@ -15,8 +15,6 @@ dateScheduleSelector.addEventListener("input", async (event) => {
   // Recebendo data escolhida
   const date = event.target.value
 
-  console.log(date)
-
   // Buscando na API os agendamentos
   const dailySchedules = await scheduleFetchByDay({ date })
 
