@@ -23,25 +23,26 @@ periods.forEach((period) => {
       // Obtendo o id do elemento clicado
       const { id } = item.dataset
 
-      if(id){
-        const isConfirm = confirm("Tem certeza que deseja remover esse agendamento?")
+      // Verificando se é possível progredir com a remoção
+      const isConfirm = confirm("Tem certeza que deseja remover esse agendamento?")
 
-        if(isConfirm){
+      // Confirmando se agendamento será removido
+      if(isConfirm){
 
-          await cancelSchedule({ id })
+        // Removendo agendamento da API
+        await cancelSchedule({ id })
 
-          // Recebendo o elemento de seletor de data da agenda
-          const dateAgendaSelector = document.getElementById("agenda-date-selector")
+        // Recebendo o elemento de seletor de data da agenda
+        const dateAgendaSelector = document.getElementById("agenda-date-selector")
 
-          // Recebendo dia selecionado
-          const date = dateAgendaSelector.value
+        // Recebendo dia selecionado
+        const date = dateAgendaSelector.value
 
-          // Requisitando agendamentos da API
-          const dailySchedules = await scheduleFetchByDay({ date })
+        // Requisitando agendamentos da API
+        const dailySchedules = await scheduleFetchByDay({ date })
 
-          // Exibindo os agendamentos na agenda
-          schedulesShow({ dailySchedules })
-        }
+        // Exibindo os agendamentos na agenda
+        schedulesShow({ dailySchedules })
       }
     }
   }
