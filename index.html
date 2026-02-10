@@ -8,9 +8,6 @@
   <title>Mundo Pet | Agenda</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
-  <link rel="icon" href="src/assets/logo.svg" type="image/x-icon">
-
 </head>
 <body>
   
@@ -53,13 +50,6 @@
 
         <!-- Lista de agendamentos da sessão: Manhã -->
         <ul id="morning-section">
-          <!-- Exemplo
-           <li>
-            <time>09:00</time>
-            <span><strong>Thor</strong><small>/ Fernanda Costa</small></span>
-            <small>Vacinação</small>
-            <button type="button">Remover agendamento</button>
-           </li> -->
         </ul>
 
       </section>
@@ -76,13 +66,6 @@
 
         <!-- Lista de agendamentos da sessão: Tarde -->
         <ul id="afternoon-section">
-          <!-- Exemplo
-           <li>
-            <time>13:00</time>
-            <span><strong>Mel</strong><small>/ João Souza</small></span>
-            <small>Corte de Unhas</small>
-            <button type="button">Remover agendamento</button>
-           </li> -->
         </ul>
 
       </section>
@@ -99,13 +82,6 @@
 
         <!-- Lista de agendamentos da sessão: Noite -->
         <ul id="night-section">
-          <!-- Exemplo
-           <li>
-            <time>20:00</time>
-            <span><strong>Max</strong><small>/ Camila Santos</small></span>
-            <small>Limpeza de Dentes</small>
-            <button type="button">Remover agendamento</button>
-           </li> -->
         </ul>
 
       </section>
@@ -135,7 +111,7 @@
         <span>Nome do tutor</span>
         <label for="client-owner">
           <img src="src/assets/owner.svg">
-          <input type="text" id="client-owner" placeholder="Helena Souza">
+          <input type="text" id="client-owner" placeholder="Helena Souza" required>
         </label>
       </div>
 
@@ -144,7 +120,7 @@
         <span>Nome do pet</span>
         <label for="client-pet">
           <img src="src/assets/pet.svg">
-          <input type="text" id="client-pet" placeholder="Cheddar">
+          <input type="text" id="client-pet" placeholder="Cheddar" required>
         </label>
       </div>
 
@@ -153,14 +129,14 @@
         <span>Telefone</span>
         <label for="client-phone">
           <img src="src/assets/phone.svg">
-          <input type="tel" id="client-phone" placeholder="(00) 00000-0000">
+          <input type="tel" id="client-phone" placeholder="(00) 00000-0000" required>
         </label>
       </div>
 
       <!-- Input: Descrição do serviço -->
       <div class="input-box">
         <span>Descrição do serviço</span>
-        <textarea id="client-service" placeholder="Banho e tosa"></textarea>
+        <textarea id="client-service" placeholder="Banho e tosa" required></textarea>
       </div>
 
       <!-- Input: Data do atendimento -->
@@ -168,7 +144,7 @@
         <span>Data</span>
         <label class="input-wrapper">
           <img src="src/assets/date.svg">
-          <input type="date" id="schedule-date" class="hidden-input">
+          <input type="date" id="schedule-date" class="hidden-input" required>
           <img src="src/assets/show.svg">
         </label>
        </div>
@@ -178,7 +154,7 @@
         <span>Hora</span>
         <label class="input-wrapper">
           <img src="src/assets/time.svg">
-          <select id="schedule-hour" class="hidden-input">
+          <select id="schedule-hour" class="hidden-input" required>
           </select>
           <img src="src/assets/show.svg">
         </label>
